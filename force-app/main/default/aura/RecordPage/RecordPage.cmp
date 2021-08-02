@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name ="name" type ="string"/>
+    <aura:attribute name = "phone" type ="Integer" />
+    
+    <lightning:layout >
+            <lightning:layoutItem padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field 1">Field 1</p>
+      <p style = "color:red">The following is the name and phone</p>
+        <!--<aura:handler name ="init" value ="{!this}" action ="{!c.myaction}"/>-->
+        <lightning:input id ="nameID" type ="string" name ="n1" label =" Your Name :: " value ="{!v.name}"/>
+        <lightning:input id =" phoneId" type ="number" name = "p1" label ="Your Phone number :: " value = "{!v.phone}"/>
+  <lightning:button variant="brand" label="Click Me" title="Brand action" onclick="{! c.handleClick }" />  
+                </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+
+
+</aura:component>

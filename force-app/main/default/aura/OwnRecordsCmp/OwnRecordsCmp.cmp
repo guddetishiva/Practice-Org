@@ -1,0 +1,18 @@
+<aura:component controller = "OwnRecords" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name = "data" type ="Project__c[]" />
+    <h1><b>My Projects </b></h1>
+    <aura:iteration items="{!v.data}" var="co">
+      
+    <lightning:recordViewForm recordId="{!co.Id}" objectApiName="Project__c">
+        <div class="slds-box">
+            <lightning:outputField fieldName="Name" />
+            <lightning:outputField fieldName="Deadline__c" />
+            <lightning:outputField fieldName="Project_cost__c" />
+            <lightning:outputField fieldName="id" />
+        </div>
+    </lightning:recordViewForm>
+    </aura:iteration>
+    
+    
+</aura:component>

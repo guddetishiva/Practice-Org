@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:recordEditForm objectApiName="Project__C">
+        <lightning:messages />
+        <lightning:inputField fieldName="Name"/>
+        <lightning:inputField fieldName="client_name__c"/>
+        <lightning:inputField fieldName="Project_cost__c"/>
+        <lightning:inputField fieldName="Project_size__c"/>
+        <lightning:button class="slds-m-top_small" type="submit" label="Save" />
+    </lightning:recordEditForm>
+</aura:component>

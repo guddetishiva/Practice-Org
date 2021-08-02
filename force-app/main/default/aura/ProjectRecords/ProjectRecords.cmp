@@ -1,0 +1,24 @@
+<aura:component controller="getProjectInformation" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    
+    <aura:attribute name="userid" type="string" default = "Demo" />
+    <aura:attribute name="projData" type="Project__c[]" />
+    <h1><strong>My Projects </strong></h1>  
+    {!userid}
+  <!--  <div class="slds-grid">
+        <div class="slds-col">-->
+            <aura:iteration items="{!v.projData}" var="proj">      
+                
+                <lightning:recordViewForm  objectApiName="Projectc" recordId="{!proj.Id}">     
+                    <div class="slds-box">
+                        
+                        <lightning:outputField fieldName="Name" />            
+                        <lightning:outputField fieldName="Project_manager__C" />
+                        <lightning:outputField fieldName="Deadline__c" />
+                        <lightning:outputField fieldName="OwnerId" />
+                  </div>
+                </lightning:recordViewForm>
+            </aura:iteration>
+   <!--     </div>
+    </div>-->
+</aura:component>

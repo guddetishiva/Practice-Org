@@ -1,0 +1,19 @@
+<aura:component controller = "ClientProject" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <aura:attribute name="data" type="Object"/>
+     <aura:attribute name="columns" type="List"/>
+    
+
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <div class ="CustomDesign">
+    <b> The Followong Projects are associated With This Project</b>
+    </div>
+
+    <!-- the container element determine the height of the datatable -->
+    <div style="height: 200px">
+        <lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="true"/>
+    </div>
+</aura:component>

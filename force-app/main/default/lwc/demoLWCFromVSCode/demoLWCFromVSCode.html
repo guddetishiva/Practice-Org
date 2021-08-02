@@ -1,0 +1,29 @@
+<template>
+
+<lightning-card title = "Calculator From LWC" icon-name="Standard:formula" > 
+    <lightning-layout multiple-rows="true">
+     <lightning-layout-item padding = "around-medium" size ="12">
+         <lightning-input name ="fnum" label ="Number One" onchange ={onChangeHandler}>
+         </lightning-input>
+     </lightning-layout-item>
+     <lightning-layout-item padding = "around-medium" size ="12">
+        <lightning-input name ="snum" label ="Number Two" onchange ={onChangeHandler}>
+        </lightning-input>
+    </lightning-layout-item>
+    <lightning-layout-item padding = "around-medium" size ="12">
+        <lightning-button-group>
+            <lightning-button  label ="Add" onclick ={add} ></lightning-button>
+            <lightning-button variant = "brand" label ="Sub" onclick ={sub}></lightning-button>
+            <lightning-button variant="success"  label ="Mul" onclick ={mul}></lightning-button>
+            <lightning-button variant="destructive"  label ="Div" onclick ={div}></lightning-button>
+        </lightning-button-group>
+    </lightning-layout-item>
+    <lightning-layout-item padding = "around-medium" size ="12">
+        <p> The Result = {result} </p>
+    </lightning-layout-item>
+   </lightning-layout>
+
+
+
+</lightning-card>
+</template>

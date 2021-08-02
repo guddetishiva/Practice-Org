@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name ="name" type ="string" default ="kumar"/>
+     <aura:attribute name ="Phone" type ="string" default ="47854784"/>
+     <lightning:input name="nam" aura:id ="ide" label="Your Name" value="{!v.name}"/>
+     <lightning:button variant="success" label="Show" title="Show" onclick="{! c.handleClick }"/>
+    
+    <h1>Hello world</h1>
+</aura:component>

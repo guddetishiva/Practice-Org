@@ -1,0 +1,35 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name ="fnumber" type ="decimal"/>
+    <aura:attribute name="snumber" type ="decimal"/>
+    <aura:attribute name ="results" type ="decimal"/>
+    <aura:attribute name ="Addition" type = "decimal"/>
+    
+    
+    
+    <div>
+        <b>calculator </b>
+    </div>
+    <div>
+        <div>
+            <ui:inputNumber label ="Enter first number" aura:id = "fnum" value ="{!v.fnumber}"/>
+            
+        </div><br/>
+        <div>
+            <ui:inputNumber label ="Enter Second Number" aura:id ="Snum" value ="{!v.snumber}"/>
+        </div><br/>
+        
+        <div>
+            <ui:inputNumber label ="Results :: " aura:id = "Res" value ="{!v.results}"/>
+        </div><br/>
+      
+    </div> 
+    <div class="slds-box">
+        <p> 
+            <button class="slds-button slds-button_outline-brand" onclick ="{!c.add}">ADD</button>
+            <button class="slds-button slds-button_destructive" onclick = "{!c.sub}">SUB</button>
+            <button class="slds-button slds-button_text-destructive" onclick = "{!c.mul}" >MUL</button>
+            <button class="slds-button slds-button_success" onclick = "{!c.div}">DIV</button>
+        </p>   
+    </div>
+    
+</aura:component>

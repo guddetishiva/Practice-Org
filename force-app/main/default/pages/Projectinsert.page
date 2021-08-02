@@ -1,0 +1,22 @@
+<apex:page controller="ContactController" extensions="PojectExtension">
+    <apex:form >
+        <apex:pageBlock title="Project creation">
+            <apex:pageBlockSection title="Project Details">
+                <apex:inputField value="{!con.name}"/>
+                <apex:inputField value="{!con.Project_cost__c}"/>
+                <apex:inputField value="{!con.Deadline__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!insertProject}" value="insert"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:pageBlock title="Exisiting Projects">
+            
+            <apex:pageBlockTable value="{!proList}" var="items">
+                <apex:column value="{!items.name}"/>
+                <apex:column value="{!items.Project_cost__c}"/>
+                <apex:column value="{!items.Deadline__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

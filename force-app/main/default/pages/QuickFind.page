@@ -1,0 +1,21 @@
+<apex:page standardController="Project__c" extensions="ExtController" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:outputLabel >Enter Employee Name</apex:outputLabel>  
+                <apex:panelGroup >
+                    <apex:inputText id="str" value="{!str}"/>
+                    <apex:commandButton value="Go" action="{!Search12}" />
+                </apex:panelGroup>
+            </apex:pageBlockSection> 
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!result}" var="l">
+                    <apex:column value="{!l.name}"/>
+                    <apex:column value="{!l.Deadline__c}"/>
+                    <apex:column value="{!l.Total_Budget__c}"/>
+                </apex:pageBlockTable>  
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,19 @@
+<template>
+<lightning-card title ="Hello" icon-name="Standard:address">
+<lightning-layout title ="Accounts">
+
+<ul>   
+<template for:each ={accts.data} for:item ="ac">
+     <li key ={ac.Name}>
+         <p>{ac.Name}</p>
+
+     </li>
+     
+   </template>
+</ul>
+</lightning-layout>
+
+
+</lightning-card>
+
+</template>

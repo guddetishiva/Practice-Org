@@ -1,0 +1,15 @@
+<apex:page standardController="Contact" >
+    <apex:form >
+        <!-- <apex:pageBlock title="Create a Record">
+            <apex:pageBlockSection title="Details">
+                <apex:outputField value="{!Contact.Lastname}"/> 
+                <apex:outputField value="{!Contact.Firstname}"/> 
+                <apex:outputField value="{!Contact.Status__c}"/> 
+            </apex:pageBlockSection>
+   
+           
+        </apex:pageBlock>-->
+        <apex:detail relatedList="false" />
+    </apex:form>
+    
+</apex:page>
